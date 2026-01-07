@@ -1,4 +1,4 @@
-# 🧳 AI Travel Planner
+#  AI Travel Planner
 
 A **constraint-aware and explainable travel itinerary planner** built with Python, Streamlit, and controlled use of LLMs.
 
@@ -6,7 +6,7 @@ This project focuses on **system design and decision-making**, not just generati
 
 ---
 
-## ✨ What This Project Does
+##  What This Project Does
 
 The AI Travel Planner helps users plan a **day itinerary** by:
 
@@ -23,7 +23,7 @@ LLMs are used **only for explanation and narration**.
 
 ---
 
-## 🧠 Core Design Idea
+##  Core Design Idea
 
 > **Planning should be deterministic.  
 > AI should explain, not decide.**
@@ -37,7 +37,7 @@ This project separates responsibilities clearly:
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 ```
 User Input (Activities + Constraints)
@@ -56,15 +56,15 @@ User Input (Activities + Constraints)
 
 ---
 
-## 🔍 Key Features
+## ✅ Key Features
 
-- ✅ Constraint-aware planning (time, budget, distance)
-- ✅ Heuristic scoring (interest, time fit, distance penalty)
-- ✅ Deterministic itinerary generation
-- ✅ Itinerary-level explainability
-- ✅ Natural language narration (LLM-assisted)
-- ✅ Clean modular architecture
-- ✅ Interactive Streamlit UI
+- Constraint-aware planning (time, budget, distance)
+- Heuristic scoring (interest, time fit, distance penalty)
+- Deterministic itinerary generation
+- Itinerary-level explainability
+- Natural language narration (LLM-assisted)
+- Clean modular architecture
+- Interactive Streamlit UI
 
 ---
 
