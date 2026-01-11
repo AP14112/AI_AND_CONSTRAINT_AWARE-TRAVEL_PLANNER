@@ -56,15 +56,15 @@ User Input (Activities + Constraints)
 
 ---
 
-##  Key Features
+## 🔍 Key Features
 
--  Constraint-aware planning (time, budget, distance)
--  Heuristic scoring (interest, time fit, distance penalty)
--  Deterministic itinerary generation
--  Itinerary-level explainability
--  Natural language narration (LLM-assisted)
--  Clean modular architecture
--  Interactive Streamlit UI
+- ✅ Constraint-aware planning (time, budget, distance)
+- ✅ Heuristic scoring (interest, time fit, distance penalty)
+- ✅ Deterministic itinerary generation
+- ✅ Itinerary-level explainability
+- ✅ Natural language narration (LLM-assisted)
+- ✅ Clean modular architecture
+- ✅ Interactive Streamlit UI
 
 ---
 
