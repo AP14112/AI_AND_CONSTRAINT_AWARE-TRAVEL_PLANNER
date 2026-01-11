@@ -1,12 +1,12 @@
-#  AI Travel Planner
+# AI Travel Planner
 
-A **constraint-aware and explainable travel itinerary planner** built with Python, Streamlit, and controlled use of LLMs.
+A **constraint-aware and explainable travel itinerary planner** built with Python and Streamlit, with controlled and intentional use of LLMs.
 
 This project focuses on **system design and decision-making**, not just generating text with AI.
 
 ---
 
-##  What This Project Does
+## What This Project Does
 
 The AI Travel Planner helps users plan a **day itinerary** by:
 
@@ -23,7 +23,7 @@ LLMs are used **only for explanation and narration**.
 
 ---
 
-##  Core Design Idea
+## Core Design Idea
 
 > **Planning should be deterministic.  
 > AI should explain, not decide.**
@@ -37,7 +37,7 @@ This project separates responsibilities clearly:
 
 ---
 
-##  Architecture Overview
+## Architecture Overview
 
 ```
 User Input (Activities + Constraints)
@@ -56,29 +56,29 @@ User Input (Activities + Constraints)
 
 ---
 
-## 🔍 Key Features
+## Key Features
 
-- ✅ Constraint-aware planning (time, budget, distance)
-- ✅ Heuristic scoring (interest, time fit, distance penalty)
-- ✅ Deterministic itinerary generation
-- ✅ Itinerary-level explainability
-- ✅ Natural language narration (LLM-assisted)
-- ✅ Clean modular architecture
-- ✅ Interactive Streamlit UI
+- Constraint-aware planning (time, budget, distance)
+- Heuristic scoring (interest, time fit, distance penalty)
+- Deterministic itinerary generation
+- Itinerary-level explainability
+- Natural language narration (LLM-assisted)
+- Clean modular architecture
+- Interactive Streamlit UI
 
 ---
 
-##  Tech Stack
+## Tech Stack
 
 - **Python**
 - **Streamlit** (UI)
 - **LangChain + Groq** (LLM interface)
-- **Modular system design**
+- **Docker** (containerization)
 - **No database (yet)** — data is generated deterministically
 
 ---
 
-##  How Activities Are Handled
+## How Activities Are Handled
 
 Users only provide:
 - Activity name
@@ -94,7 +94,7 @@ This avoids noisy user input and keeps planning **predictable and explainable**.
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### 1️⃣ Create a virtual environment
 ```bash
@@ -104,7 +104,7 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 
 ### 2️⃣ Install dependencies
 ```bash
-pip install -e .
+pip install -r requirements.txt
 ```
 
 ### 3️⃣ Add environment variables
@@ -120,28 +120,37 @@ streamlit run app/app.py
 
 ---
 
-## 📁 Project Structure
+## Deployment
+
+- The application is **Dockerized** for reproducible builds.
+- Deployed on **Streamlit Cloud** for simplicity and fast iteration.
+- Secrets (API keys) are injected at runtime via Streamlit Cloud’s secrets manager.
+- The Docker image remains portable to other platforms (e.g., Kubernetes) if needed.
+
+---
+
+## Project Structure
 
 ```
 .
-├── app/                    # Streamlit UI
-├── src/
+├── app/                    # Streamlit app and UI entry point
+│   ├── app.py
 │   ├── core/               # Planning, scoring, constraints
 │   ├── chains/             # Explainer & narrator (LLM usage)
-│   └── config/             # Environment configuration
+│   ├── config/             # Environment configuration
+│   └── utils/
+├── Dockerfile
+├── requirements.txt
 ├── .gitignore
-├── README.md
-└── setup.py
-
+└── README.md
 ```
 
 ---
 
-## 🧩 What This Project Is NOT
+## What This Project Is NOT
 
-- ❌ Not a ChatGPT wrapper  
-- ❌ Not prompt-only itinerary generation  
-- ❌ Not full route optimization  
+- Not a ChatGPT wrapper  
+- Not prompt-only itinerary generation  
+- Not full route optimization  
 
-This project prioritizes **clarity, control, and explainability** over complexity.
-
+This project prioritizes **clarity, control, and explainability** over unnecessary complexity.
