@@ -7,8 +7,7 @@ setup(
     name="ai-travel-planner",
     version="0.1",
     description="An AI-powered travel planning application",
-    package_dir={"": "src"},
     author="Aryaman Prasad",
-    packages=find_packages(where="src"),
+    packages=find_packages(),
     install_requires=requirements,
 )
